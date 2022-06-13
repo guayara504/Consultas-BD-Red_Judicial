@@ -1,8 +1,8 @@
 SELECT z01_radicacion_juzgado AS JUZGADO,z01_radicacion_z01_radicacion AS RADICACION,demandante,demandado,clase_proceso AS PROCESO,fecha_ingreso AS FECHA,sincronizado AS SYNC,digitador,ciudad 
 FROM z04_estado  
-WHERE 
+WHERE
 		#FECHA A REVISAR
-		fecha_notificacion LIKE "%2022%"
+		(fecha_notificacion LIKE "%2022%"
 		#fecha_notificacion = CURDATE()
 		
 		#REVISAR ESPACIOS EN JUZGADOS Y CIUDADES AL PRINCIPIO Y AL FINAL
@@ -58,4 +58,7 @@ WHERE
 			 OR ciudad LIKE "%\n%"
 			 OR demandante LIKE "%\n%" 
 			 OR demandado LIKE "%\n%" 
-			 OR clase_proceso LIKE "%\n%"))
+			 OR clase_proceso LIKE "%\n%")))
+		
+		#Revisar Fecha Notificacion Mala
+		OR fecha_notificacion LIKE "0000-00-00"
