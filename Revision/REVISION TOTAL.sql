@@ -58,10 +58,10 @@ WHERE
 			 OR ciudad LIKE "%\n%"
 			 OR demandante LIKE "%\n%" 
 			 OR demandado LIKE "%\n%" 
-			 OR clase_proceso LIKE "%\n%"))
+			 OR clase_proceso LIKE "%\n%")
 		
 		OR (clase_proceso = " " OR demandante = " " OR demandado = " "
 			 OR clase_proceso = "  " OR demandante = "  " OR demandado = "  "))
-		
+		)
 		#Revisar Fecha Notificacion Mala
 		OR fecha_notificacion LIKE "0000-00-00"
