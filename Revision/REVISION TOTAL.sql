@@ -50,7 +50,8 @@ WHERE
 		OR (z01_radicacion_juzgado  LIKE "%  %")
 		
 		#DOBLE "DE" EN EL JUZGADO
-		OR (z01_radicacion_juzgado LIKE "%DE DE%")
+		OR (z01_radicacion_juzgado LIKE "%DE DE%"
+		AND z01_radicacion_juzgado NOT LIKE "%DESC%")
 		
 		#Revisar Linea con doble linea
 		OR (z01_radicacion_juzgado LIKE "%\n%" 
