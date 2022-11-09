@@ -62,7 +62,9 @@ WHERE
 			 OR clase_proceso LIKE "%\n%")
 		
 		OR (clase_proceso = " " OR demandante = " " OR demandado = " "
-			 OR clase_proceso = "  " OR demandante = "  " OR demandado = "  "))
+			 OR clase_proceso = "  " OR demandante = "  " OR demandado = "  ")
+		     
+		OR (z01_radicacion_z01_radicacion LIKE "%____00000%"))
 		)
 		#Revisar Fecha Notificacion Mala
 		OR fecha_notificacion LIKE "0000-00-00"
